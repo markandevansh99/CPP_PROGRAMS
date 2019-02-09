@@ -69,3 +69,26 @@ void main()
  x.Input();
  x.display();
  getch();
+}
+
+
+
+//to count occurence of a character y in a string
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+clrscr();
+char s[50],y;
+int ctr=0,i;
+cout<<"\nenter any string::";
+gets(s);
+cout<<"\nenter the character to be searched for::";
+cin>>y;
+for(i=0;s[i]!='\0';i++)
+  if(s[i]==y)
+    ctr++;
+cout<<"\noccurence of the character in the string is::"<<ctr;
+getch();
+}
