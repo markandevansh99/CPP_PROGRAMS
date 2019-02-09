@@ -1,0 +1,26 @@
+//Convert Decimal To Binary using 1-D Array
+
+#include<iostream.h>
+#include<conio.h>
+void dec_to_binary(int n)
+{
+ int binarynum[1000];
+ int i=0;
+ while(n>0)
+ {
+  binarynum[i]=n%2;
+  n=n/2;
+  i++;
+ }
+ cout<<"\nBinary Coversion is :-  ";
+ for(int j=i-1;j>=0;j--)
+ cout<<binarynum[j];
+}
+void main()
+{ clrscr();
+ int num;
+ cout<<"\n Enter any Decimal Number::";
+ cin>>num;
+ dec_to_binary(num);
+ getch();
+ }
