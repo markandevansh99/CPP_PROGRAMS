@@ -24,3 +24,67 @@ void main()
  dec_to_binary(num);
  getch();
  }
+
+
+
+
+/*to print the sum of elements of array
+by using function overloading*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+ int sum(int a[],int n)
+ {
+ int s=0,i;
+  for (i=0;i<n;i++)
+   s=s+a[i];
+   return s;
+ }
+ int sum(int y[],char z)
+ {
+ int su=0,i;
+ if(z=='E')
+ {
+ for(i=0;i<5;i++)
+     if(y[i]%2==0)
+    su=su+y[i];
+    return su;
+ }
+  if(z=='O')
+  {
+   for(i=0;i<5;i++)
+    if(y[i]%2==1)
+     su=su+y[i];
+     return su;
+   }
+   else
+   su=0;
+   return su;
+  }
+void main()
+{
+ clrscr();
+ int s1,s2;
+ s1=s2=0;
+ int x[5];
+ for(int i=0;i<5;i++)
+ {
+  cout<<"\nEnter "<<i+1<<" Element ::";
+  cin>>x[i];
+ }
+ s1=sum(x,5);
+ cout<<"\nSum of all the Elements of the Array::"<<s1;
+ char v;
+ cout<<"\n\nEnter a Character::";
+ cin>>v;
+ s2=sum(x,v);
+ if(v=='E')
+ cout<<"\nSum of Even Numbers ::"<<s2;
+ else
+ if(v=='O')
+ cout<<"\nSum of Odd Numbers ::"<<s2;
+ else
+ cout<<"\nFor Neither Even Nor Odd,Result is ::"<<s2;
+ getch();
+ }
